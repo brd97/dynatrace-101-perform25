@@ -1,9 +1,12 @@
 ---
 - include_role:
     name: k3s
-- include_role:
-    name: app-easytrade
+
 - include_role:
     name: dt-operator
+
+- include_role:
+    name: app-easytrade
+
 - include_role:
     name: dashboard
