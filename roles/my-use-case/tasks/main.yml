@@ -1,4 +1,8 @@
 ---
+- include_role:
+    name: k3s
+- include_role:
+    name: dt-operator
 - name: app-easytrade
   include_tasks: "{{role_path}}/files/app-easytrade/tasks/main.yaml"
   vars:
@@ -9,3 +13,5 @@
     easytrade_domain: "easytrade.{{ ingress_domain }}"
     easytrade_addDashboardLink: true
     easytrade_addDashboardPreview: true
+- include_role:
+    name: dashboard
